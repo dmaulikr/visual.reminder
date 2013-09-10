@@ -59,11 +59,6 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
                   withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (void)scrollToTextField:(UITextField *)textField
-{
-    [self.tableView scrollRectToVisible:textField.frame animated:YES];
-}
-
 #pragma mark - Button Events
 
 - (IBAction)addButtonClicked:(id)sender
@@ -111,6 +106,8 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 
 - (void)cellCommentDidEndEditing:(LFReminderCell *)cell
 {
+    [self.tableView scrollRectToVisible:cell.frame
+                               animated:YES];
     [self.managedObjectContext save:nil];
 }
 
