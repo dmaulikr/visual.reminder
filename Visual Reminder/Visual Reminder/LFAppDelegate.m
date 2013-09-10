@@ -22,14 +22,8 @@
     UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
     LFReminderListViewController *controller = (LFReminderListViewController *) navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
-    NSFetchRequest *fetchAllReminderList = [self.managedObjectModel fetchRequestTemplateForName:@"FetchAllReminderLists"];
-    NSArray *reminderLists = [self.managedObjectContext executeFetchRequest:fetchAllReminderList error:nil];
-    if ([reminderLists count] > 0) {
-        controller.reminderList = [reminderLists objectAtIndex:0];
-    } else {
-        controller.reminderList = (ReminderList *) [NSEntityDescription insertNewObjectForEntityForName:@"ReminderList"
-                                                                                 inManagedObjectContext:self.managedObjectContext];
-    }
+    controller.fetchReminderListsRequest = [self.managedObjectModel fetchRequestTemplateForName:@"FetchAllReminderLists"];
+    
     
     return YES;
 }

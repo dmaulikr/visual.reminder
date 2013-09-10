@@ -14,6 +14,7 @@
 @interface LFReminderListViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, LFReminderCellDelegate,UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSFetchRequest *fetchReminderListsRequest;
 @property (strong, nonatomic) ReminderList *reminderList;
 
 @end

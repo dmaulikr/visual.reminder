@@ -11,5 +11,6 @@
 @interface LFUtils : NSObject
 
 + (UIImage *)resizeImage:(UIImage *)image toSize:(CGSize)size;
++ (UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message;
 
 @end

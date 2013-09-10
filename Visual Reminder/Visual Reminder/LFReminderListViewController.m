@@ -29,16 +29,22 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 @implementation LFReminderListViewController
 
 @synthesize reminderList;
+@synthesize managedObjectContext;
+@synthesize fetchReminderListsRequest;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = NSLocalizedString(@"Reminder.list.title",);
 
     [self.tableView registerNib:[UINib nibWithNibName:@"LFReminderCell"
                                                bundle:nil]
          forCellReuseIdentifier:REMINDER_CELL_IDENTIFIER];
     
     self.tableView.backgroundColor = [UIColor lightGrayColor];
+    
+    [self fetchPersistedReminderList];
     
     [self refreshData];
 }
@@ -51,6 +57,18 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 }
 
 #pragma mark - Private Methods
+
+- (void)fetchPersistedReminderList
+{
+    NSArray *reminderLists = [self.managedObjectContext executeFetchRequest:self.fetchReminderListsRequest
+                                                                      error:nil];
+    if ([reminderLists count] > 0) {
+        self.reminderList = [reminderLists objectAtIndex:0];
+    } else {
+        self.reminderList = (ReminderList *) [NSEntityDescription insertNewObjectForEntityForName:@"ReminderList"
+                                                                                 inManagedObjectContext:self.managedObjectContext];
+    }
+}
 
 - (void)refreshData
 {
@@ -120,6 +138,7 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.allowsEditing = NO;
     imagePickerController.delegate = self;
     
     [self presentViewController:imagePickerController animated:YES completion:nil];

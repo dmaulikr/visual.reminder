@@ -14,7 +14,6 @@
 		BF312D4B17DF01530093C97A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF312D4917DF01530093C97A /* InfoPlist.strings */; };
 		BF312D4D17DF01530093C97A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D4C17DF01530093C97A /* main.m */; };
 		BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5017DF01530093C97A /* LFAppDelegate.m */; };
-		BF312D5417DF01530093C97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF312D5217DF01530093C97A /* Main.storyboard */; };
 		BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */; };
 		BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5917DF01530093C97A /* LFReminderListViewController.m */; };
 		BF312D5F17DF01530093C97A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF312D5E17DF01530093C97A /* Images.xcassets */; };
@@ -30,7 +29,12 @@
 		BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF312D8817DF04BA0093C97A /* LFReminderCell.xib */; };
 		BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D9817DF25BA0093C97A /* LFUtils.m */; };
 		BFE5B5A317DF571B002B39BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFE5B5A117DF571B002B39BA /* Localizable.strings */; };
-		BFE5B5A617DF5730002B39BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFE5B5A417DF5730002B39BA /* Localizable.strings */; };
+		BFE5B5F517DF78AB002B39BA /* LFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5F417DF78AB002B39BA /* LFAboutViewController.m */; };
+		BFE5B5F817DF7977002B39BA /* LFFlipLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */; };
+		BFE5B5FB17DF7ADA002B39BA /* LFFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */; };
+		BFE5B5FE17DF7B64002B39BA /* LFFlipRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */; };
+		BFE5B60017DF8BB9002B39BA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE5B5FF17DF8BB9002B39BA /* MessageUI.framework */; };
+		BFE5B60217DF8C1D002B39BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE5B60117DF8C1D002B39BA /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,6 @@
 		BF312D4E17DF01530093C97A /* Visual Reminder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Visual Reminder-Prefix.pch"; sourceTree = "<group>"; };
 		BF312D4F17DF01530093C97A /* LFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFAppDelegate.h; sourceTree = "<group>"; };
 		BF312D5017DF01530093C97A /* LFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFAppDelegate.m; sourceTree = "<group>"; };
-		BF312D5317DF01530093C97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF312D5617DF01530093C97A /* Visual_Reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Visual_Reminder.xcdatamodel; sourceTree = "<group>"; };
 		BF312D5817DF01530093C97A /* LFReminderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFReminderListViewController.h; sourceTree = "<group>"; };
 		BF312D5917DF01530093C97A /* LFReminderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFReminderListViewController.m; sourceTree = "<group>"; };
@@ -75,7 +78,17 @@
 		BF312D9717DF25BA0093C97A /* LFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUtils.h; sourceTree = "<group>"; };
 		BF312D9817DF25BA0093C97A /* LFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFUtils.m; sourceTree = "<group>"; };
 		BFE5B5A217DF571B002B39BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BFE5B5A517DF5730002B39BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFE5B5F317DF78AB002B39BA /* LFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAboutViewController.h; sourceTree = "<group>"; };
+		BFE5B5F417DF78AB002B39BA /* LFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAboutViewController.m; sourceTree = "<group>"; };
+		BFE5B5F617DF7977002B39BA /* LFFlipLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipLeftSegue.h; sourceTree = "<group>"; };
+		BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipLeftSegue.m; sourceTree = "<group>"; };
+		BFE5B5F917DF7ADA002B39BA /* LFFlipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipSegue.h; sourceTree = "<group>"; };
+		BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipSegue.m; sourceTree = "<group>"; };
+		BFE5B5FC17DF7B64002B39BA /* LFFlipRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipRightSegue.h; sourceTree = "<group>"; };
+		BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipRightSegue.m; sourceTree = "<group>"; };
+		BFE5B5FF17DF8BB9002B39BA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BFE5B60117DF8C1D002B39BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		BFE5B60917DF91A4002B39BA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE5B60217DF8C1D002B39BA /* Social.framework in Frameworks */,
+				BFE5B60017DF8BB9002B39BA /* MessageUI.framework in Frameworks */,
 				BF312D4117DF01530093C97A /* CoreGraphics.framework in Frameworks */,
 				BF312D4517DF01530093C97A /* CoreData.framework in Frameworks */,
 				BF312D4317DF01530093C97A /* UIKit.framework in Frameworks */,
@@ -126,6 +141,8 @@
 		BF312D3D17DF01530093C97A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5B60117DF8C1D002B39BA /* Social.framework */,
+				BFE5B5FF17DF8BB9002B39BA /* MessageUI.framework */,
 				BF312D3E17DF01530093C97A /* Foundation.framework */,
 				BF312D4017DF01530093C97A /* CoreGraphics.framework */,
 				BF312D4217DF01530093C97A /* UIKit.framework */,
@@ -140,7 +157,6 @@
 			children = (
 				BF312D4F17DF01530093C97A /* LFAppDelegate.h */,
 				BF312D5017DF01530093C97A /* LFAppDelegate.m */,
-				BF312D5217DF01530093C97A /* Main.storyboard */,
 				BF312D5E17DF01530093C97A /* Images.xcassets */,
 				BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */,
 				BF312D8217DF03D20093C97A /* Model */,
@@ -159,8 +175,7 @@
 				BF312D4917DF01530093C97A /* InfoPlist.strings */,
 				BF312D4C17DF01530093C97A /* main.m */,
 				BF312D4E17DF01530093C97A /* Visual Reminder-Prefix.pch */,
-				BFE5B5A717DF5743002B39BA /* English */,
-				BFE5B5A817DF5749002B39BA /* French */,
+				BFE5B5A117DF571B002B39BA /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,6 +224,8 @@
 			children = (
 				BF312D5817DF01530093C97A /* LFReminderListViewController.h */,
 				BF312D5917DF01530093C97A /* LFReminderListViewController.m */,
+				BFE5B5F317DF78AB002B39BA /* LFAboutViewController.h */,
+				BFE5B5F417DF78AB002B39BA /* LFAboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -218,24 +235,14 @@
 			children = (
 				BF312D9717DF25BA0093C97A /* LFUtils.h */,
 				BF312D9817DF25BA0093C97A /* LFUtils.m */,
+				BFE5B5F917DF7ADA002B39BA /* LFFlipSegue.h */,
+				BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */,
+				BFE5B5F617DF7977002B39BA /* LFFlipLeftSegue.h */,
+				BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */,
+				BFE5B5FC17DF7B64002B39BA /* LFFlipRightSegue.h */,
+				BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
-		};
-		BFE5B5A717DF5743002B39BA /* English */ = {
-			isa = PBXGroup;
-			children = (
-				BFE5B5A117DF571B002B39BA /* Localizable.strings */,
-			);
-			name = English;
-			sourceTree = "<group>";
-		};
-		BFE5B5A817DF5749002B39BA /* French */ = {
-			isa = PBXGroup;
-			children = (
-				BFE5B5A417DF5730002B39BA /* Localizable.strings */,
-			);
-			name = French;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +308,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = BF312D3217DF01530093C97A;
 			productRefGroup = BF312D3C17DF01530093C97A /* Products */;
@@ -320,9 +328,7 @@
 			files = (
 				BFE5B5A317DF571B002B39BA /* Localizable.strings in Resources */,
 				BF312D5F17DF01530093C97A /* Images.xcassets in Resources */,
-				BFE5B5A617DF5730002B39BA /* Localizable.strings in Resources */,
 				BF312D4B17DF01530093C97A /* InfoPlist.strings in Resources */,
-				BF312D5417DF01530093C97A /* Main.storyboard in Resources */,
 				BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,12 +349,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */,
+				BFE5B5FE17DF7B64002B39BA /* LFFlipRightSegue.m in Sources */,
 				BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */,
 				BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */,
 				BF312D4D17DF01530093C97A /* main.m in Sources */,
 				BF312D8117DF03A20093C97A /* ReminderList.m in Sources */,
+				BFE5B5F517DF78AB002B39BA /* LFAboutViewController.m in Sources */,
 				BF312D7E17DF03A20093C97A /* Reminder.m in Sources */,
 				BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */,
+				BFE5B5FB17DF7ADA002B39BA /* LFFlipSegue.m in Sources */,
+				BFE5B5F817DF7977002B39BA /* LFFlipLeftSegue.m in Sources */,
 				BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,14 +390,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BF312D5217DF01530093C97A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF312D5317DF01530093C97A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF312D6F17DF01540093C97A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -400,14 +402,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFE5B5A217DF571B002B39BA /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		BFE5B5A417DF5730002B39BA /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFE5B5A517DF5730002B39BA /* Base */,
+				BFE5B60917DF91A4002B39BA /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

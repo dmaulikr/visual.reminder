@@ -19,4 +19,14 @@
     return newImage;
 }
 
++ (UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    return alertView;
+}
+
 @end

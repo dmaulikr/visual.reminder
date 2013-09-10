@@ -6,4 +6,11 @@
   Copyright (c) 2013 Little Factory. All rights reserved.
 */
 
+"Reminder.list.title" = "Reminders";
+
 "Reminder.cell.comment.placeholder" = "A comment ?";
+
+"Reminder.about.title" = "About";
+"Reminder.about.contact.label" = "Contact us :";
+"Reminder.about.contact.support.label" = "Support us :";
+"Reminder.about.contact.support.button" = "Donate via PayPal";
