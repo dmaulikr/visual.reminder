@@ -93,7 +93,7 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     
     Reminder *reminder = [self.reminderList.reminders objectAtIndex:indexPath.row];
     cell.reminderImageView.image = reminder.image;
-    cell.shortCommentLabel.text = reminder.shortComment;
+    cell.shortCommentLabel.text = @"Lorem ipsum dolor sit amet"; //reminder.shortComment;
     cell.polaroidView.layer.shadowColor = [[UIColor blackColor] CGColor];
     cell.polaroidView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
     cell.polaroidView.layer.shadowOpacity = 1.0;
