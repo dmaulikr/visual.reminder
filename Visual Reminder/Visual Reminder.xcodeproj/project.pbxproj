@@ -28,6 +28,7 @@
 		BF312D8117DF03A20093C97A /* ReminderList.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8017DF03A20093C97A /* ReminderList.m */; };
 		BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8617DF049A0093C97A /* LFReminderCell.m */; };
 		BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF312D8817DF04BA0093C97A /* LFReminderCell.xib */; };
+		BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D9817DF25BA0093C97A /* LFUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		BF312D8517DF049A0093C97A /* LFReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFReminderCell.h; sourceTree = "<group>"; };
 		BF312D8617DF049A0093C97A /* LFReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFReminderCell.m; sourceTree = "<group>"; };
 		BF312D8817DF04BA0093C97A /* LFReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFReminderCell.xib; sourceTree = "<group>"; };
+		BF312D9717DF25BA0093C97A /* LFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUtils.h; sourceTree = "<group>"; };
+		BF312D9817DF25BA0093C97A /* LFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +137,12 @@
 				BF312D4F17DF01530093C97A /* LFAppDelegate.h */,
 				BF312D5017DF01530093C97A /* LFAppDelegate.m */,
 				BF312D5217DF01530093C97A /* Main.storyboard */,
-				BF312D5817DF01530093C97A /* LFReminderListViewController.h */,
-				BF312D5917DF01530093C97A /* LFReminderListViewController.m */,
 				BF312D5E17DF01530093C97A /* Images.xcassets */,
 				BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */,
 				BF312D8217DF03D20093C97A /* Model */,
 				BF312D8317DF04250093C97A /* Views */,
 				BF312D8417DF04460093C97A /* Controllers */,
+				BF312D9617DF259A0093C97A /* Utils */,
 				BF312D4717DF01530093C97A /* Supporting Files */,
 			);
 			path = "Visual Reminder";
@@ -189,6 +191,8 @@
 		BF312D8317DF04250093C97A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF312D8517DF049A0093C97A /* LFReminderCell.h */,
+				BF312D8617DF049A0093C97A /* LFReminderCell.m */,
 				BF312D8817DF04BA0093C97A /* LFReminderCell.xib */,
 			);
 			name = Views;
@@ -197,10 +201,19 @@
 		BF312D8417DF04460093C97A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF312D8517DF049A0093C97A /* LFReminderCell.h */,
-				BF312D8617DF049A0093C97A /* LFReminderCell.m */,
+				BF312D5817DF01530093C97A /* LFReminderListViewController.h */,
+				BF312D5917DF01530093C97A /* LFReminderListViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BF312D9617DF259A0093C97A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF312D9717DF25BA0093C97A /* LFUtils.h */,
+				BF312D9817DF25BA0093C97A /* LFUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +322,7 @@
 				BF312D8117DF03A20093C97A /* ReminderList.m in Sources */,
 				BF312D7E17DF03A20093C97A /* Reminder.m in Sources */,
 				BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */,
+				BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +527,7 @@
 				BF312D7817DF01540093C97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF312D7917DF01540093C97A /* Build configuration list for PBXNativeTarget "Visual ReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +536,7 @@
 				BF312D7B17DF01540093C97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

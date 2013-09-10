@@ -8,11 +8,13 @@
 
 #import "LFReminderListViewController.h"
 
+#import "LFUtils.h"
 #import "LFReminderCell.h"
 #import "ReminderList.h"
 #import "Reminder.h"
 
 static NSString * const REMINDER_CELL_IDENTIFIER = @"LFReminderCellIdentifier";
+static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 
 @interface LFReminderListViewController ()
 
@@ -30,6 +32,7 @@ static NSString * const REMINDER_CELL_IDENTIFIER = @"LFReminderCellIdentifier";
 
     [self.tableView registerNib:[UINib nibWithNibName:@"LFReminderCell" bundle:nil]
          forCellReuseIdentifier:REMINDER_CELL_IDENTIFIER];
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +60,8 @@ static NSString * const REMINDER_CELL_IDENTIFIER = @"LFReminderCellIdentifier";
     UIImage *capturedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     Reminder *createdReminder = [NSEntityDescription insertNewObjectForEntityForName:@"Reminder"
                                                               inManagedObjectContext:self.managedObjectContext];
-    createdReminder.image = capturedImage;
+    createdReminder.image = [LFUtils resizeImage:capturedImage
+                                          toSize:IMAGE_RESIZE_FORMAT];
     
     [self.reminderList addRemindersObject:createdReminder];
     [self.managedObjectContext save:nil];
@@ -88,8 +92,11 @@ static NSString * const REMINDER_CELL_IDENTIFIER = @"LFReminderCellIdentifier";
     LFReminderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:REMINDER_CELL_IDENTIFIER];
     
     Reminder *reminder = [self.reminderList.reminders objectAtIndex:indexPath.row];
-    cell.imageView.image = reminder.image;
+    cell.reminderImageView.image = reminder.image;
     cell.shortCommentLabel.text = reminder.shortComment;
+    cell.polaroidView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    cell.polaroidView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
+    cell.polaroidView.layer.shadowOpacity = 1.0;
     
     return cell;
 }

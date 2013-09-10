@@ -10,7 +10,8 @@
 
 @interface LFReminderCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *polaroidView;
+@property (weak, nonatomic) IBOutlet UIImageView *reminderImageView;
 @property (weak, nonatomic) IBOutlet UILabel *shortCommentLabel;
 
 @end
