@@ -14,8 +14,7 @@
 
 @property (nonatomic, retain) NSString * shortComment;
 @property (nonatomic, retain) NSString * longComment;
-@property (nonatomic, retain) NSNumber * isDone;
 @property (nonatomic, retain) NSNumber * done;
-@property (nonatomic, retain) UIImage *image;
+@property (nonatomic, retain) id image;
 
 @end

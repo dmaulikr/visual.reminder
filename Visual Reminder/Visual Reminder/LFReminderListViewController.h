@@ -8,8 +8,11 @@
 
 #import <CoreData/CoreData.h>
 
-@interface LFMainViewController : UIViewController
+#import "ReminderList.h"
+
+@interface LFReminderListViewController : UIViewController <UIImagePickerControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) ReminderList *reminderList;
 
 @end

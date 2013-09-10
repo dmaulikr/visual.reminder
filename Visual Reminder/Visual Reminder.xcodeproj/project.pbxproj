@@ -16,7 +16,7 @@
 		BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5017DF01530093C97A /* LFAppDelegate.m */; };
 		BF312D5417DF01530093C97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF312D5217DF01530093C97A /* Main.storyboard */; };
 		BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */; };
-		BF312D5A17DF01530093C97A /* LFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5917DF01530093C97A /* LFMainViewController.m */; };
+		BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D5917DF01530093C97A /* LFReminderListViewController.m */; };
 		BF312D5F17DF01530093C97A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF312D5E17DF01530093C97A /* Images.xcassets */; };
 		BF312D6617DF01530093C97A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D6517DF01530093C97A /* XCTest.framework */; };
 		BF312D6717DF01540093C97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D3E17DF01530093C97A /* Foundation.framework */; };
@@ -26,6 +26,8 @@
 		BF312D7317DF01540093C97A /* Visual_ReminderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D7217DF01540093C97A /* Visual_ReminderTests.m */; };
 		BF312D7E17DF03A20093C97A /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D7D17DF03A20093C97A /* Reminder.m */; };
 		BF312D8117DF03A20093C97A /* ReminderList.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8017DF03A20093C97A /* ReminderList.m */; };
+		BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8617DF049A0093C97A /* LFReminderCell.m */; };
+		BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF312D8817DF04BA0093C97A /* LFReminderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +54,8 @@
 		BF312D5017DF01530093C97A /* LFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFAppDelegate.m; sourceTree = "<group>"; };
 		BF312D5317DF01530093C97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF312D5617DF01530093C97A /* Visual_Reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Visual_Reminder.xcdatamodel; sourceTree = "<group>"; };
-		BF312D5817DF01530093C97A /* LFMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMainViewController.h; sourceTree = "<group>"; };
-		BF312D5917DF01530093C97A /* LFMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMainViewController.m; sourceTree = "<group>"; };
+		BF312D5817DF01530093C97A /* LFReminderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFReminderListViewController.h; sourceTree = "<group>"; };
+		BF312D5917DF01530093C97A /* LFReminderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFReminderListViewController.m; sourceTree = "<group>"; };
 		BF312D5E17DF01530093C97A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF312D6417DF01530093C97A /* Visual ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Visual ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF312D6517DF01530093C97A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,6 +66,9 @@
 		BF312D7D17DF03A20093C97A /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 		BF312D7F17DF03A20093C97A /* ReminderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderList.h; sourceTree = "<group>"; };
 		BF312D8017DF03A20093C97A /* ReminderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderList.m; sourceTree = "<group>"; };
+		BF312D8517DF049A0093C97A /* LFReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFReminderCell.h; sourceTree = "<group>"; };
+		BF312D8617DF049A0093C97A /* LFReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFReminderCell.m; sourceTree = "<group>"; };
+		BF312D8817DF04BA0093C97A /* LFReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFReminderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +134,13 @@
 				BF312D4F17DF01530093C97A /* LFAppDelegate.h */,
 				BF312D5017DF01530093C97A /* LFAppDelegate.m */,
 				BF312D5217DF01530093C97A /* Main.storyboard */,
-				BF312D5817DF01530093C97A /* LFMainViewController.h */,
-				BF312D5917DF01530093C97A /* LFMainViewController.m */,
+				BF312D5817DF01530093C97A /* LFReminderListViewController.h */,
+				BF312D5917DF01530093C97A /* LFReminderListViewController.m */,
 				BF312D5E17DF01530093C97A /* Images.xcassets */,
 				BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */,
 				BF312D8217DF03D20093C97A /* Model */,
+				BF312D8317DF04250093C97A /* Views */,
+				BF312D8417DF04460093C97A /* Controllers */,
 				BF312D4717DF01530093C97A /* Supporting Files */,
 			);
 			path = "Visual Reminder";
@@ -177,6 +184,23 @@
 				BF312D7D17DF03A20093C97A /* Reminder.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BF312D8317DF04250093C97A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF312D8817DF04BA0093C97A /* LFReminderCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BF312D8417DF04460093C97A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF312D8517DF049A0093C97A /* LFReminderCell.h */,
+				BF312D8617DF049A0093C97A /* LFReminderCell.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +283,7 @@
 				BF312D5F17DF01530093C97A /* Images.xcassets in Resources */,
 				BF312D4B17DF01530093C97A /* InfoPlist.strings in Resources */,
 				BF312D5417DF01530093C97A /* Main.storyboard in Resources */,
+				BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */,
+				BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */,
 				BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */,
 				BF312D4D17DF01530093C97A /* main.m in Sources */,
 				BF312D8117DF03A20093C97A /* ReminderList.m in Sources */,
 				BF312D7E17DF03A20093C97A /* Reminder.m in Sources */,
-				BF312D5A17DF01530093C97A /* LFMainViewController.m in Sources */,
+				BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -421,6 +448,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -13,7 +13,6 @@
 
 @dynamic shortComment;
 @dynamic longComment;
-@dynamic isDone;
 @dynamic done;
 @dynamic image;
 
