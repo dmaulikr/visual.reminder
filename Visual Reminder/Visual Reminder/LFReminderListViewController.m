@@ -44,6 +44,8 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private Methods
+
 - (void)refreshData
 {
     self.sortedReminders = [self.reminderList.reminders sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
@@ -55,6 +57,11 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                   withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)scrollToTextField:(UITextField *)textField
+{
+    [self.tableView scrollRectToVisible:textField.frame animated:YES];
 }
 
 #pragma mark - Button Events
@@ -92,6 +99,21 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - LFReminderCellDelegate
+
+- (void)cellCommentWillBeginEditing:(LFReminderCell *)cell
+{
+    CGRect rectToScrollTo = cell.frame;
+    rectToScrollTo.origin.y += 300;
+    [self.tableView scrollRectToVisible:rectToScrollTo
+                               animated:YES];
+}
+
+- (void)cellCommentDidEndEditing:(LFReminderCell *)cell
+{
+    [self.managedObjectContext save:nil];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,12 +130,9 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 {
     LFReminderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:REMINDER_CELL_IDENTIFIER];
     
-    Reminder *reminder = [self.sortedReminders objectAtIndex:indexPath.row];
-    cell.reminderImageView.image = reminder.image;
-    cell.shortCommentLabel.text = reminder.shortComment;
-    cell.polaroidView.layer.shadowColor = [[UIColor blackColor] CGColor];
-    cell.polaroidView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
-    cell.polaroidView.layer.shadowOpacity = 1.0;
+    cell.reminder = [self.sortedReminders objectAtIndex:indexPath.row];
+    [cell setUpCell];
+    cell.reminderCellDelegate = self;
     
     return cell;
 }

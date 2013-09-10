@@ -9,8 +9,9 @@
 #import <CoreData/CoreData.h>
 
 #import "ReminderList.h"
+#import "LFReminderCell.h"
 
-@interface LFReminderListViewController : UIViewController <UIImagePickerControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface LFReminderListViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, LFReminderCellDelegate,UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) ReminderList *reminderList;
