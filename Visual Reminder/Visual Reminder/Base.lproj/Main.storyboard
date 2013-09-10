@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Wbx-u3-2zi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l9E-07-oys">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="410" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pZV-vX-696">
-                                <rect key="frame" x="0.0" y="20" width="320" height="416"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="410" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pZV-vX-696">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -26,8 +26,8 @@
                                     <outlet property="delegate" destination="rQl-PL-IFJ" id="4g6-mR-xSQ"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-ku-qx7">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-ku-qx7">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="17Q-Lx-i1d"/>
@@ -41,8 +41,13 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wbx-u3-2zi" firstAttribute="top" secondItem="ip4-ku-qx7" secondAttribute="bottom" id="3mO-ml-d1l"/>
+                            <constraint firstItem="pZV-vX-696" firstAttribute="top" secondItem="CHH-XN-MLA" secondAttribute="bottom" id="Ewa-Cx-crP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hnc-XK-70R"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableView" destination="pZV-vX-696" id="qPj-lU-GDt"/>
                     </connections>
@@ -73,6 +78,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
