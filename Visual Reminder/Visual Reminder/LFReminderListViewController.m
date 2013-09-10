@@ -19,6 +19,7 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 @interface LFReminderListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *sortedReminders;
 
 @end
 
@@ -33,12 +34,27 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     [self.tableView registerNib:[UINib nibWithNibName:@"LFReminderCell" bundle:nil]
          forCellReuseIdentifier:REMINDER_CELL_IDENTIFIER];
     self.tableView.backgroundColor = [UIColor lightGrayColor];
+    
+    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refreshData
+{
+    self.sortedReminders = [self.reminderList.reminders sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Reminder *reminder1 = (Reminder *)obj1;
+        Reminder *reminder2 = (Reminder *)obj2;
+        
+        return [reminder2.date compare:reminder1.date];
+    }];
+    
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Button Events
@@ -62,12 +78,13 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
                                                               inManagedObjectContext:self.managedObjectContext];
     createdReminder.image = [LFUtils resizeImage:capturedImage
                                           toSize:IMAGE_RESIZE_FORMAT];
+    createdReminder.date = [NSDate date];
     
     [self.reminderList addRemindersObject:createdReminder];
     [self.managedObjectContext save:nil];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.tableView reloadData];
+        [self refreshData];
     }];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -84,14 +101,14 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.reminderList.reminders count];
+    return [self.sortedReminders count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LFReminderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:REMINDER_CELL_IDENTIFIER];
     
-    Reminder *reminder = [self.reminderList.reminders objectAtIndex:indexPath.row];
+    Reminder *reminder = [self.sortedReminders objectAtIndex:indexPath.row];
     cell.reminderImageView.image = reminder.image;
     cell.shortCommentLabel.text = @"Lorem ipsum dolor sit amet"; //reminder.shortComment;
     cell.polaroidView.layer.shadowColor = [[UIColor blackColor] CGColor];

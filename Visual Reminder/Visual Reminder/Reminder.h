@@ -12,9 +12,10 @@
 
 @interface Reminder : NSManagedObject
 
-@property (nonatomic, retain) NSString * shortComment;
-@property (nonatomic, retain) NSString * longComment;
 @property (nonatomic, retain) NSNumber * done;
 @property (nonatomic, retain) id image;
+@property (nonatomic, retain) NSString * longComment;
+@property (nonatomic, retain) NSString * shortComment;
+@property (nonatomic, retain) NSDate * date;
 
 @end

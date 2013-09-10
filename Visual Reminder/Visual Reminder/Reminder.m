@@ -11,9 +11,10 @@
 
 @implementation Reminder
 
-@dynamic shortComment;
-@dynamic longComment;
 @dynamic done;
 @dynamic image;
+@dynamic longComment;
+@dynamic shortComment;
+@dynamic date;
 
 @end
