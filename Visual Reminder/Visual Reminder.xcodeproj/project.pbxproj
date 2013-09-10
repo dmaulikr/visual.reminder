@@ -24,6 +24,8 @@
 		BF312D6917DF01540093C97A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D4417DF01530093C97A /* CoreData.framework */; };
 		BF312D7117DF01540093C97A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF312D6F17DF01540093C97A /* InfoPlist.strings */; };
 		BF312D7317DF01540093C97A /* Visual_ReminderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D7217DF01540093C97A /* Visual_ReminderTests.m */; };
+		BF312D7E17DF03A20093C97A /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D7D17DF03A20093C97A /* Reminder.m */; };
+		BF312D8117DF03A20093C97A /* ReminderList.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8017DF03A20093C97A /* ReminderList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		BF312D6E17DF01540093C97A /* Visual ReminderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Visual ReminderTests-Info.plist"; sourceTree = "<group>"; };
 		BF312D7017DF01540093C97A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF312D7217DF01540093C97A /* Visual_ReminderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visual_ReminderTests.m; sourceTree = "<group>"; };
+		BF312D7C17DF03A20093C97A /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		BF312D7D17DF03A20093C97A /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		BF312D7F17DF03A20093C97A /* ReminderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderList.h; sourceTree = "<group>"; };
+		BF312D8017DF03A20093C97A /* ReminderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 				BF312D5917DF01530093C97A /* LFMainViewController.m */,
 				BF312D5E17DF01530093C97A /* Images.xcassets */,
 				BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */,
+				BF312D8217DF03D20093C97A /* Model */,
 				BF312D4717DF01530093C97A /* Supporting Files */,
 			);
 			path = "Visual Reminder";
@@ -159,6 +166,17 @@
 				BF312D6F17DF01540093C97A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF312D8217DF03D20093C97A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF312D7F17DF03A20093C97A /* ReminderList.h */,
+				BF312D8017DF03A20093C97A /* ReminderList.m */,
+				BF312D7C17DF03A20093C97A /* Reminder.h */,
+				BF312D7D17DF03A20093C97A /* Reminder.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +280,8 @@
 				BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */,
 				BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */,
 				BF312D4D17DF01530093C97A /* main.m in Sources */,
+				BF312D8117DF03A20093C97A /* ReminderList.m in Sources */,
+				BF312D7E17DF03A20093C97A /* Reminder.m in Sources */,
 				BF312D5A17DF01530093C97A /* LFMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
