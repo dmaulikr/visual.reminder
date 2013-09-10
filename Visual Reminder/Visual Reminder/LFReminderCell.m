@@ -15,8 +15,19 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        [self setUpCell];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    [self setUpCell];
+}
+
+- (void)setUpCell
+{
+    self.shortCommentLabel.placeholder = NSLocalizedString(@"Reminder.cell.comment.placeholder",);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

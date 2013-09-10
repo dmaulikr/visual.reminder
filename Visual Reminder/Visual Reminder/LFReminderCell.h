@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *polaroidView;
 @property (weak, nonatomic) IBOutlet UIImageView *reminderImageView;
-@property (weak, nonatomic) IBOutlet UILabel *shortCommentLabel;
+@property (weak, nonatomic) IBOutlet UITextField *shortCommentLabel;
 
 @end
