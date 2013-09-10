@@ -286,6 +286,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Little Factory";
 				TargetAttributes = {
+					BF312D3A17DF01530093C97A = {
+						DevelopmentTeam = 6W46Y2XX8N;
+					};
 					BF312D6317DF01530093C97A = {
 						TestTargetID = BF312D3A17DF01530093C97A;
 					};
@@ -485,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";
@@ -499,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";

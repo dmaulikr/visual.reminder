@@ -16,10 +16,13 @@
 static NSString * const REMINDER_CELL_IDENTIFIER = @"LFReminderCellIdentifier";
 static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 
-@interface LFReminderListViewController ()
+@interface LFReminderListViewController () {
+    LFReminderCell *activeCell;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *sortedReminders;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
 
@@ -31,17 +34,20 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 {
     [super viewDidLoad];
 
-    [self.tableView registerNib:[UINib nibWithNibName:@"LFReminderCell" bundle:nil]
+    [self.tableView registerNib:[UINib nibWithNibName:@"LFReminderCell"
+                                               bundle:nil]
          forCellReuseIdentifier:REMINDER_CELL_IDENTIFIER];
+    
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     
     [self refreshData];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    [self registerForKeyboardNotifications];
 }
 
 #pragma mark - Private Methods
@@ -57,6 +63,54 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                   withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (Reminder *)reminderForDisplayAtIndex:(NSUInteger)idx
+{
+    return [self.sortedReminders objectAtIndex:idx];
+}
+
+#pragma mark - Handling Keyboard
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height - self.toolbar.frame.size.height, 0.0);
+    self.tableView.contentInset = contentInsets;
+    self.tableView.scrollIndicatorInsets = contentInsets;
+    
+    [self.tableView scrollRectToVisible:activeCell.frame
+                               animated:YES];
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    [self.tableView scrollRectToVisible:activeCell.frame
+                               animated:YES];
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.tableView.contentInset = contentInsets;
+    self.tableView.scrollIndicatorInsets = contentInsets;
+    
+    
 }
 
 #pragma mark - Button Events
@@ -83,7 +137,6 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
     createdReminder.date = [NSDate date];
     
     [self.reminderList addRemindersObject:createdReminder];
-    [self.managedObjectContext save:nil];
     
     [self dismissViewControllerAnimated:YES completion:^{
         [self refreshData];
@@ -98,17 +151,12 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 
 - (void)cellCommentWillBeginEditing:(LFReminderCell *)cell
 {
-    CGRect rectToScrollTo = cell.frame;
-    rectToScrollTo.origin.y += 300;
-    [self.tableView scrollRectToVisible:rectToScrollTo
-                               animated:YES];
+    activeCell = cell;
 }
 
 - (void)cellCommentDidEndEditing:(LFReminderCell *)cell
 {
-    [self.tableView scrollRectToVisible:cell.frame
-                               animated:YES];
-    [self.managedObjectContext save:nil];
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -127,7 +175,7 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 {
     LFReminderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:REMINDER_CELL_IDENTIFIER];
     
-    cell.reminder = [self.sortedReminders objectAtIndex:indexPath.row];
+    cell.reminder = [self reminderForDisplayAtIndex:indexPath.row];
     [cell setUpCell];
     cell.reminderCellDelegate = self;
     
@@ -135,5 +183,11 @@ static CGSize const IMAGE_RESIZE_FORMAT = {480.f, 640.f};
 }
 
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.reminderList removeRemindersObject:[self reminderForDisplayAtIndex:indexPath.row]];
+    [self refreshData];
+}
 
 @end
