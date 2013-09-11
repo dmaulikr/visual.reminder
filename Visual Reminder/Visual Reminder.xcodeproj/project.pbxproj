@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF00D52817E068D9000D3398 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = BF00D52617E068D9000D3398 /* iTunesArtwork */; };
+		BF00D52917E068D9000D3398 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = BF00D52717E068D9000D3398 /* iTunesArtwork@2x */; };
 		BF312D3F17DF01530093C97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D3E17DF01530093C97A /* Foundation.framework */; };
 		BF312D4117DF01530093C97A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D4017DF01530093C97A /* CoreGraphics.framework */; };
 		BF312D4317DF01530093C97A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF312D4217DF01530093C97A /* UIKit.framework */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF00D52617E068D9000D3398 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		BF00D52717E068D9000D3398 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		BF312D3B17DF01530093C97A /* Visual Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Visual Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF312D3E17DF01530093C97A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF312D4017DF01530093C97A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,6 +175,8 @@
 		BF312D4717DF01530093C97A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF00D52617E068D9000D3398 /* iTunesArtwork */,
+				BF00D52717E068D9000D3398 /* iTunesArtwork@2x */,
 				BF312D4817DF01530093C97A /* Visual Reminder-Info.plist */,
 				BF312D4917DF01530093C97A /* InfoPlist.strings */,
 				BF312D4C17DF01530093C97A /* main.m */,
@@ -326,9 +332,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF00D52917E068D9000D3398 /* iTunesArtwork@2x in Resources */,
 				BFE5B5A317DF571B002B39BA /* Localizable.strings in Resources */,
 				BF312D5F17DF01530093C97A /* Images.xcassets in Resources */,
 				BF312D4B17DF01530093C97A /* InfoPlist.strings in Resources */,
+				BF00D52817E068D9000D3398 /* iTunesArtwork in Resources */,
 				BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +495,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -502,7 +510,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visual Reminder/Visual Reminder-Prefix.pch";
 				INFOPLIST_FILE = "Visual Reminder/Visual Reminder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
