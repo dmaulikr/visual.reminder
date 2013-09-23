@@ -30,11 +30,9 @@
 		BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D8617DF049A0093C97A /* LFReminderCell.m */; };
 		BF312D8917DF04BA0093C97A /* LFReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF312D8817DF04BA0093C97A /* LFReminderCell.xib */; };
 		BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BF312D9817DF25BA0093C97A /* LFUtils.m */; };
+		BF35630F17F07D6F002F68C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF35630E17F07D6F002F68C9 /* Main.storyboard */; };
 		BFE5B5A317DF571B002B39BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFE5B5A117DF571B002B39BA /* Localizable.strings */; };
 		BFE5B5F517DF78AB002B39BA /* LFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5F417DF78AB002B39BA /* LFAboutViewController.m */; };
-		BFE5B5F817DF7977002B39BA /* LFFlipLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */; };
-		BFE5B5FB17DF7ADA002B39BA /* LFFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */; };
-		BFE5B5FE17DF7B64002B39BA /* LFFlipRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */; };
 		BFE5B60017DF8BB9002B39BA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE5B5FF17DF8BB9002B39BA /* MessageUI.framework */; };
 		BFE5B60217DF8C1D002B39BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE5B60117DF8C1D002B39BA /* Social.framework */; };
 /* End PBXBuildFile section */
@@ -81,15 +79,10 @@
 		BF312D8817DF04BA0093C97A /* LFReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFReminderCell.xib; sourceTree = "<group>"; };
 		BF312D9717DF25BA0093C97A /* LFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUtils.h; sourceTree = "<group>"; };
 		BF312D9817DF25BA0093C97A /* LFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFUtils.m; sourceTree = "<group>"; };
+		BF35630E17F07D6F002F68C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BFE5B5A217DF571B002B39BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFE5B5F317DF78AB002B39BA /* LFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAboutViewController.h; sourceTree = "<group>"; };
 		BFE5B5F417DF78AB002B39BA /* LFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAboutViewController.m; sourceTree = "<group>"; };
-		BFE5B5F617DF7977002B39BA /* LFFlipLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipLeftSegue.h; sourceTree = "<group>"; };
-		BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipLeftSegue.m; sourceTree = "<group>"; };
-		BFE5B5F917DF7ADA002B39BA /* LFFlipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipSegue.h; sourceTree = "<group>"; };
-		BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipSegue.m; sourceTree = "<group>"; };
-		BFE5B5FC17DF7B64002B39BA /* LFFlipRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFlipRightSegue.h; sourceTree = "<group>"; };
-		BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFlipRightSegue.m; sourceTree = "<group>"; };
 		BFE5B5FF17DF8BB9002B39BA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BFE5B60117DF8C1D002B39BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BFE5B60917DF91A4002B39BA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -162,6 +155,7 @@
 				BF312D4F17DF01530093C97A /* LFAppDelegate.h */,
 				BF312D5017DF01530093C97A /* LFAppDelegate.m */,
 				BF312D5E17DF01530093C97A /* Images.xcassets */,
+				BF35630E17F07D6F002F68C9 /* Main.storyboard */,
 				BF312D5517DF01530093C97A /* Visual_Reminder.xcdatamodeld */,
 				BF312D8217DF03D20093C97A /* Model */,
 				BF312D8317DF04250093C97A /* Views */,
@@ -241,12 +235,6 @@
 			children = (
 				BF312D9717DF25BA0093C97A /* LFUtils.h */,
 				BF312D9817DF25BA0093C97A /* LFUtils.m */,
-				BFE5B5F917DF7ADA002B39BA /* LFFlipSegue.h */,
-				BFE5B5FA17DF7ADA002B39BA /* LFFlipSegue.m */,
-				BFE5B5F617DF7977002B39BA /* LFFlipLeftSegue.h */,
-				BFE5B5F717DF7977002B39BA /* LFFlipLeftSegue.m */,
-				BFE5B5FC17DF7B64002B39BA /* LFFlipRightSegue.h */,
-				BFE5B5FD17DF7B64002B39BA /* LFFlipRightSegue.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -332,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF35630F17F07D6F002F68C9 /* Main.storyboard in Resources */,
 				BF00D52917E068D9000D3398 /* iTunesArtwork@2x in Resources */,
 				BFE5B5A317DF571B002B39BA /* Localizable.strings in Resources */,
 				BF312D5F17DF01530093C97A /* Images.xcassets in Resources */,
@@ -357,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF312D5117DF01530093C97A /* LFAppDelegate.m in Sources */,
-				BFE5B5FE17DF7B64002B39BA /* LFFlipRightSegue.m in Sources */,
 				BF312D8717DF049A0093C97A /* LFReminderCell.m in Sources */,
 				BF312D5717DF01530093C97A /* Visual_Reminder.xcdatamodeld in Sources */,
 				BF312D4D17DF01530093C97A /* main.m in Sources */,
@@ -365,8 +353,6 @@
 				BFE5B5F517DF78AB002B39BA /* LFAboutViewController.m in Sources */,
 				BF312D7E17DF03A20093C97A /* Reminder.m in Sources */,
 				BF312D5A17DF01530093C97A /* LFReminderListViewController.m in Sources */,
-				BFE5B5FB17DF7ADA002B39BA /* LFFlipSegue.m in Sources */,
-				BFE5B5F817DF7977002B39BA /* LFFlipLeftSegue.m in Sources */,
 				BF312D9917DF25BA0093C97A /* LFUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
